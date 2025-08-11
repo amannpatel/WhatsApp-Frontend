@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Avatar } from "../../shared/ui";
 
 export const HomePage = () => {
