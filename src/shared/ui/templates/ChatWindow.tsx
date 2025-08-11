@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MessageBubble } from "../molecules/MessageBubble";
 import { Button } from "../primitives/Button";
+import { ChatHeader } from "../molecules/ChatHeader";
 
 interface Message {
   id: string;
@@ -50,6 +51,13 @@ export const ChatWindow: React.FC = () => {
 
   return (
     <div className="flex flex-col h-[500px] w-full max-w-md border rounded-lg overflow-hidden">
+      {/* WhatsApp-like header */}
+      <ChatHeader
+        chatName="Alice"
+        chatStatus="online"
+        chatAvatar="https://randomuser.me/api/portraits/women/1.jpg"
+      />
+
       {/* Chat messages */}
       <div className="flex-1 p-4 space-y-3 overflow-y-auto bg-white">
         {messages.map((msg) => (
